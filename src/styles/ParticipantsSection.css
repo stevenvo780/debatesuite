@@ -137,12 +137,12 @@
 }
 
 .participant-reset-button {
-  background: rgba(15, 118, 110, 0.10) !important;
+  background: rgba(47, 132, 120, 0.10) !important;
 }
 
 .participant-reset-button:hover,
 .participant-reset-button:focus {
-  background: rgba(15, 118, 110, 0.18) !important;
+  background: rgba(47, 132, 120, 0.18) !important;
 }
 
 .participant-menu-toggle::after {
@@ -169,7 +169,7 @@
 
 .participant-menu-dropdown .dropdown-item:hover,
 .participant-menu-dropdown .dropdown-item:focus {
-  background: rgba(15, 118, 110, 0.08);
+  background: rgba(47, 132, 120, 0.08);
   color: var(--text);
 }
 
@@ -194,7 +194,7 @@
 .icon-button:hover {
   opacity: 1;
   transform: scale(1.06);
-  background: rgba(15, 118, 110, 0.08) !important;
+  background: rgba(47, 132, 120, 0.08) !important;
 }
 
 .icon-button:active {
@@ -234,9 +234,9 @@
 }
 
 .pill-active {
-  background: rgba(15, 118, 110, 0.15);
-  color: #115E59;
-  border: 1px solid rgba(15, 118, 110, 0.40);
+  background: rgba(47, 132, 120, 0.15);
+  color: #1e5c52;
+  border: 1px solid rgba(47, 132, 120, 0.40);
 }
 
 .pill-paused {
@@ -270,7 +270,7 @@
   text-align: center;
 }
 
-.points-display.positive { color: #0F766E; }
+.points-display.positive { color: #2f8478; }
 .points-display.negative { color: #B42318; }
 .points-display.on-danger { color: #ffffff; }
 

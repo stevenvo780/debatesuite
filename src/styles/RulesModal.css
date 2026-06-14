@@ -53,8 +53,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(15, 118, 110, 0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 80%, rgba(181, 121, 26, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 20%, rgba(47, 132, 120, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(154, 103, 18, 0.10) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(244, 241, 233, 1) 0%, var(--bg-color) 100%);
 }
 
@@ -68,7 +68,7 @@
 .rl-hero-icon {
   font-size: 4rem;
   color: var(--primary-color);
-  filter: drop-shadow(0 0 30px rgba(15, 118, 110, 0.35));
+  filter: drop-shadow(0 0 30px rgba(47, 132, 120, 0.35));
   animation: rl-pulse 2.5s ease-in-out infinite;
 }
 
@@ -83,7 +83,7 @@
   color: var(--primary-color);
   margin: 1rem 0 0.25rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 0 60px rgba(15, 118, 110, 0.20);
+  text-shadow: 0 0 60px rgba(47, 132, 120, 0.20);
 }
 
 .rl-hero-sub {
@@ -155,7 +155,7 @@
   color: var(--primary-text);
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 20px rgba(15, 118, 110, 0.25);
+  box-shadow: 0 4px 20px rgba(47, 132, 120, 0.25);
 }
 
 .rl-section h2 {
@@ -179,7 +179,7 @@
   border-left: 4px solid var(--accent);
   padding: 1.25rem 1.5rem;
   margin: 2rem 0 0;
-  background: rgba(181, 121, 26, 0.06);
+  background: rgba(154, 103, 18, 0.06);
   border-radius: 0 12px 12px 0;
   font-style: italic;
   font-weight: 500;
@@ -194,8 +194,8 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.07), rgba(181, 121, 26, 0.06));
-  border: 1px solid rgba(15, 118, 110, 0.20);
+  background: linear-gradient(135deg, rgba(47, 132, 120, 0.07), rgba(154, 103, 18, 0.06));
+  border: 1px solid rgba(47, 132, 120, 0.20);
   border-radius: 16px;
   margin-bottom: 1.5rem;
 }
@@ -387,7 +387,7 @@
   background: var(--card-color);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(15, 118, 110, 0.08);
+  box-shadow: 0 2px 12px rgba(47, 132, 120, 0.08);
 }
 
 /* ─── CONDUCT ─── */
@@ -411,8 +411,8 @@
 }
 
 .rl-conduct-warn {
-  border-color: rgba(146, 97, 10, 0.25);
-  background: linear-gradient(135deg, rgba(146, 97, 10, 0.05), transparent);
+  border-color: rgba(146, 97, 10, 0.25) /* warning unchanged */;
+  background: linear-gradient(135deg, rgba(146, 97, 10, 0.05) /* warning unchanged */, transparent);
 }
 
 .rl-conduct-icon {
@@ -485,7 +485,7 @@
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
-  background: rgba(181, 121, 26, 0.06);
+  background: rgba(154, 103, 18, 0.06);
   transition: all 0.25s;
 }
 
@@ -505,7 +505,7 @@
 /* ─── POINTS SECTION ─── */
 .rl-section-points {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(15, 118, 110, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(47, 132, 120, 0.06) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 50%, rgba(180, 35, 24, 0.05) 0%, transparent 50%),
     var(--bg-color);
 }
@@ -578,8 +578,8 @@
 }
 
 .rl-point-badge.positive {
-  background: rgba(15, 118, 110, 0.10);
-  border: 1px solid rgba(15, 118, 110, 0.25);
+  background: rgba(47, 132, 120, 0.10);
+  border: 1px solid rgba(47, 132, 120, 0.25);
 }
 
 .rl-point-badge.negative {
@@ -664,7 +664,7 @@
 }
 
 .rl-card-warn {
-  border-color: rgba(181, 121, 26, 0.30);
+  border-color: rgba(154, 103, 18, 0.30);
 }
 
 .rl-card-danger {
@@ -727,7 +727,7 @@
 .rl-closing {
   padding: 6rem 1.5rem;
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(15, 118, 110, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(47, 132, 120, 0.07) 0%, transparent 60%),
     var(--bg-color);
 }
 
@@ -735,7 +735,7 @@
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
-  filter: drop-shadow(0 0 20px rgba(15, 118, 110, 0.30));
+  filter: drop-shadow(0 0 20px rgba(47, 132, 120, 0.30));
 }
 
 .rl-closing-text {
@@ -755,7 +755,7 @@
   padding: 1.25rem 2rem;
   border: 2px solid var(--primary-color);
   border-radius: 16px;
-  background: rgba(15, 118, 110, 0.06);
+  background: rgba(47, 132, 120, 0.06);
   display: inline-block;
   text-shadow: none;
 }

@@ -367,7 +367,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--ring);
-  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(47, 132, 120, 0.15);
 }
 
 .global-session-title::placeholder {
@@ -597,7 +597,7 @@ select:focus {
   background-color: var(--bg-color);
   color: var(--font-color);
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(47, 132, 120, 0.15);
 }
 
 /* Ajustes para texto en modales */
@@ -672,14 +672,14 @@ select:focus {
   gap: 0.5rem;
   min-width: 0;
   padding: 0.45rem 0.7rem;
-  background: rgba(20, 32, 46, 0.05);
+  background: rgba(20, 32, 46, 0.04);
   border: 1px solid var(--border);
   border-radius: 999px;
 }
 
 .top-stat-chip.accent {
-  background: rgba(181, 121, 26, 0.10);
-  border-color: rgba(181, 121, 26, 0.30);
+  background: rgba(154, 103, 18, 0.10);
+  border-color: rgba(154, 103, 18, 0.30);
 }
 
 .top-stat-button {
@@ -689,7 +689,7 @@ select:focus {
 }
 
 .top-stat-button:hover {
-  background: rgba(15, 118, 110, 0.08);
+  background: rgba(47, 132, 120, 0.08);
 }
 
 .gstat-icon {
@@ -767,7 +767,7 @@ select:focus {
 
 .top-navbar-actions .dropdown-item:hover,
 .top-navbar-actions .dropdown-item:focus {
-  background: rgba(15, 118, 110, 0.08);
+  background: rgba(47, 132, 120, 0.08);
   color: var(--text);
 }
 
@@ -804,7 +804,7 @@ select:focus {
   padding: 0.42rem 0.75rem;
   border-radius: 999px;
   background: rgba(20, 32, 46, 0.04);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
 }
 
 .control-summary-pill-wide {
@@ -985,7 +985,7 @@ select:focus {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  background: #14202E;
+  background: var(--text);
   margin-bottom: 1rem;
   line-height: 0;
 }

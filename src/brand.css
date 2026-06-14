@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════
-   BRAND TOKENS — teal + dorado (modo claro)
+   BRAND TOKENS — Cloud Atlas (modo claro)
    Fuente canónica: docs/05-activos/brand-tokens.md
    ═══════════════════════════════════════════ */
 
@@ -11,15 +11,15 @@
   --border:         #E5DFD2;
   --text:           #14202E;
   --text-muted:     #51606F;
-  --primary:        #0F766E;
-  --primary-strong: #115E59;
+  --primary:        #2f8478;
+  --primary-strong: #1e5c52;
   --on-primary:     #FFFFFF;
-  --accent:         #B5791A;
-  --accent-strong:  #9A6712;
+  --accent:         #9A6712;
+  --accent-strong:  #7a5210;
   --on-accent:      #FFFFFF;
-  --link:           #0F766E;
-  --ring:           #0F766E;
-  --success:        #0F766E;
+  --link:           #2f8478;
+  --ring:           #2f8478;
+  --success:        #2f8478;
   --warning:        #92610A;
   --danger:         #B42318;
 
@@ -39,14 +39,14 @@
   --secondary-border:#51606F;
   --secondary-text:  #FFFFFF;
 
-  --info-color:      #0F766E;
-  --info-hover:      #115E59;
-  --info-border:     #0F766E;
+  --info-color:      #2f8478;
+  --info-hover:      #1e5c52;
+  --info-border:     #2f8478;
   --info-text:       #FFFFFF;
 
-  --success-color:   #0F766E;
-  --success-hover:   #115E59;
-  --success-border:  #0F766E;
+  --success-color:   #2f8478;
+  --success-hover:   #1e5c52;
+  --success-border:  #2f8478;
   --success-text:    #FFFFFF;
 
   /* Amber-dark for warning (passes AA on white: ~4.6:1) */
@@ -76,13 +76,16 @@
   --section-color:   var(--surface-2);
 
   /* Direct brand tokens (referenced without -color suffix in some components) */
-  --accent:          #B5791A;
-  --accent-strong:   #9A6712;
+  --accent:          #9A6712;
+  --accent-strong:   #7a5210;
   --on-accent:       #FFFFFF;
   --danger:          #B42318;
-  --ring:            #0F766E;
-  --success:         #0F766E;
+  --ring:            #2f8478;
+  --success:         #2f8478;
   --warning:         #92610A;
-  --primary-strong:  #115E59;
+  --primary-strong:  #1e5c52;
   --on-primary:      #FFFFFF;
+
+  /* Cloud Atlas gradient signature */
+  --gradient-firma:  linear-gradient(110deg, #e0a85e 0%, #cf6a3c 35%, #43b5a6 100%);
 }
