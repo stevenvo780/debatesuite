@@ -80,11 +80,11 @@
 }
 
 .bonus-label {
-  color: var(--success-hover);
+  color: var(--success);
 }
 
 .penalty-label {
-  color: var(--danger-hover);
+  color: var(--danger);
 }
 
 /* Criterion items */
@@ -167,11 +167,11 @@
 
 .action-btn:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 .action-btn.danger:hover {
-  color: var(--danger-hover);
+  color: var(--danger);
 }
 
 /* Edit mode */
@@ -270,7 +270,7 @@
 }
 
 .stab:not(.active):hover {
-  opacity: 0.9;
+  opacity: 1;
   background: var(--card-hover);
 }
 
@@ -361,7 +361,7 @@
 
 .action-panel-close:hover {
   opacity: 1;
-  background: rgba(255,255,255,0.1);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 .action-panel-buttons {
@@ -393,19 +393,19 @@
 }
 
 .action-big-btn.landed {
-  background: rgba(218, 165, 32, 0.12);
+  background: rgba(146, 97, 10, 0.08);
   border-color: var(--warning-color);
   color: var(--warning-color);
 }
 
 .action-big-btn.landed:not(:disabled):hover {
   background: var(--warning-color);
-  color: #1a1a1a;
+  color: #FFFFFF;
   transform: scale(1.03);
 }
 
 .action-big-btn.detected {
-  background: rgba(220, 53, 69, 0.12);
+  background: rgba(180, 35, 24, 0.08);
   border-color: var(--danger-color);
   color: var(--danger-color);
 }
@@ -473,16 +473,16 @@
 }
 
 .detector-chip.selected {
-  background: rgba(85, 107, 47, 0.2);
+  background: rgba(15, 118, 110, 0.12);
   border-color: var(--success-color);
-  color: var(--success-text);
+  color: var(--success-color);
 }
 
 .fallacy-history-panel {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(20, 32, 46, 0.03);
   border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 0.55rem;
@@ -549,7 +549,7 @@
 }
 
 .fallacy-history-undo:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 /* Flash feedback */
@@ -603,7 +603,7 @@
 
 .fallacy-item.selected {
   border-color: var(--primary-color);
-  background: rgba(205, 133, 63, 0.1);
+  background: rgba(15, 118, 110, 0.07);
 }
 
 /* Info icon */
@@ -623,7 +623,7 @@
 .fallacy-info-btn:hover {
   opacity: 1;
   color: var(--primary-color);
-  background: rgba(205, 133, 63, 0.15);
+  background: rgba(15, 118, 110, 0.10);
 }
 
 .fallacy-select-btn {
@@ -711,7 +711,7 @@
 
 .def-popover-header button:hover {
   opacity: 1;
-  background: rgba(255,255,255,0.1);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 .fallacy-def-popover p {

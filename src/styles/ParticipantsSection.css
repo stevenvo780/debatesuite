@@ -44,12 +44,12 @@
 }
 
 .participant-card:focus {
-  outline: 2px solid var(--info-color);
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
 .card-active {
-  outline: 2px solid var(--success-color);
+  outline: 2px solid var(--primary);
   outline-offset: 1px;
 }
 
@@ -137,12 +137,12 @@
 }
 
 .participant-reset-button {
-  background: rgba(13, 202, 240, 0.14) !important;
+  background: rgba(15, 118, 110, 0.10) !important;
 }
 
 .participant-reset-button:hover,
 .participant-reset-button:focus {
-  background: rgba(13, 202, 240, 0.22) !important;
+  background: rgba(15, 118, 110, 0.18) !important;
 }
 
 .participant-menu-toggle::after {
@@ -169,8 +169,8 @@
 
 .participant-menu-dropdown .dropdown-item:hover,
 .participant-menu-dropdown .dropdown-item:focus {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white-color);
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--text);
 }
 
 .participant-menu-dropdown .dropdown-item svg {
@@ -178,7 +178,7 @@
 }
 
 .participant-menu-danger {
-  color: #ffb4b4 !important;
+  color: var(--danger) !important;
 }
 
 .icon-button {
@@ -194,7 +194,7 @@
 .icon-button:hover {
   opacity: 1;
   transform: scale(1.06);
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(15, 118, 110, 0.08) !important;
 }
 
 .icon-button:active {
@@ -234,15 +234,15 @@
 }
 
 .pill-active {
-  background: rgba(85, 107, 47, 0.45);
-  color: #a8d87a;
-  border: 1px solid rgba(85, 107, 47, 0.6);
+  background: rgba(15, 118, 110, 0.15);
+  color: #115E59;
+  border: 1px solid rgba(15, 118, 110, 0.40);
 }
 
 .pill-paused {
-  background: rgba(74, 74, 74, 0.45);
-  color: #aaa;
-  border: 1px solid rgba(74, 74, 74, 0.6);
+  background: rgba(81, 96, 111, 0.15);
+  color: #3D4D5A;
+  border: 1px solid rgba(81, 96, 111, 0.35);
 }
 
 .participant-score-row {
@@ -270,8 +270,8 @@
   text-align: center;
 }
 
-.points-display.positive { color: #73d08a; }
-.points-display.negative { color: #ff8c8c; }
+.points-display.positive { color: #0F766E; }
+.points-display.negative { color: #B42318; }
 .points-display.on-danger { color: #ffffff; }
 
 .stats-row {
@@ -282,7 +282,7 @@
   font-size: 0.82rem;
   opacity: 0.78;
   padding-top: 0.35rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border);
   margin-top: auto;
 }
 

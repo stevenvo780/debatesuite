@@ -4,7 +4,7 @@
   cursor: grab;
   display: inline-block;
   padding: 4px 8px;
-  background: repeating-linear-gradient(90deg, #ccc, #ccc 2px, transparent 2px, transparent 4px);
+  background: repeating-linear-gradient(90deg, #51606F, #51606F 2px, transparent 2px, transparent 4px);
   border-radius: 4px;
   margin-right: 0.5rem;
 }

@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════
+   BRAND TOKENS — teal + dorado (modo claro)
+   Fuente canónica: docs/05-activos/brand-tokens.md
+   ═══════════════════════════════════════════ */
+
+:root,
+[data-theme="light"] {
+  --bg:             #FBFAF6;
+  --surface:        #FFFFFF;
+  --surface-2:      #F4F1E9;
+  --border:         #E5DFD2;
+  --text:           #14202E;
+  --text-muted:     #51606F;
+  --primary:        #0F766E;
+  --primary-strong: #115E59;
+  --on-primary:     #FFFFFF;
+  --accent:         #B5791A;
+  --accent-strong:  #9A6712;
+  --on-accent:      #FFFFFF;
+  --link:           #0F766E;
+  --ring:           #0F766E;
+  --success:        #0F766E;
+  --warning:        #92610A;
+  --danger:         #B42318;
+
+  /* Legacy aliases used throughout App.css / component CSS */
+  --bg-color:        var(--bg);
+  --font-color:      var(--text);
+  --white-color:     #FFFFFF;
+  --border-color:    var(--border);
+
+  --primary-color:   var(--primary);
+  --primary-hover:   var(--primary-strong);
+  --primary-border:  var(--primary);
+  --primary-text:    var(--on-primary);
+
+  --secondary-color: #51606F;
+  --secondary-hover: #3D4D5A;
+  --secondary-border:#51606F;
+  --secondary-text:  #FFFFFF;
+
+  --info-color:      #0F766E;
+  --info-hover:      #115E59;
+  --info-border:     #0F766E;
+  --info-text:       #FFFFFF;
+
+  --success-color:   #0F766E;
+  --success-hover:   #115E59;
+  --success-border:  #0F766E;
+  --success-text:    #FFFFFF;
+
+  /* Amber-dark for warning (passes AA on white: ~4.6:1) */
+  --warning-color:   #92610A;
+  --warning-hover:   #7A510A;
+  --warning-border:  #92610A;
+  --warning-text:    #FFFFFF;
+
+  --danger-color:    #B42318;
+  --danger-hover:    #92190F;
+  --danger-border:   #B42318;
+  --danger-text:     #FFFFFF;
+
+  --link-color:      var(--link);
+  --link-hover:      var(--primary-strong);
+  --link-border:     var(--link);
+  --link-text:       #FFFFFF;
+
+  --outline-color:   var(--primary);
+
+  --card-color:      var(--surface);
+  --card-hover:      var(--surface-2);
+  --card-border:     var(--border);
+  --card-text:       var(--text);
+
+  --navbar-color:    var(--surface);
+  --section-color:   var(--surface-2);
+
+  /* Direct brand tokens (referenced without -color suffix in some components) */
+  --accent:          #B5791A;
+  --accent-strong:   #9A6712;
+  --on-accent:       #FFFFFF;
+  --danger:          #B42318;
+  --ring:            #0F766E;
+  --success:         #0F766E;
+  --warning:         #92610A;
+  --primary-strong:  #115E59;
+  --on-primary:      #FFFFFF;
+}

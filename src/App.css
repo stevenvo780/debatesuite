@@ -1,61 +1,4 @@
-:root {
-  --font-color: #FFFFFF;
-  --bg-color: #1A1A1A;
-  --white-color: #FFFFFF;
-  --border-color: #333333;
-
-  /* Café punk palette */
-  --primary-color: #8B4513;
-  --primary-hover: #A0522D;
-  --primary-border: #8B4513;
-  --primary-text: #FFFFFF;
-
-  --secondary-color: #4A4A4A;
-  --secondary-hover: #5A5A5A;
-  --secondary-border: #4A4A4A;
-  --secondary-text: #FFFFFF;
-
-  --info-color: #CD853F;
-  --info-hover: #DEB887;
-  --info-border: #CD853F;
-  --info-text: #1A1A1A;
-
-  --success-color: #556B2F;
-  --success-hover: #6B8E23;
-  --success-border: #556B2F;
-  --success-text: #FFFFFF;
-
-  --warning-color: #DAA520;
-  --warning-hover: #B8860B;
-  --warning-border: #DAA520;
-  --warning-text: #1A1A1A;
-
-  --danger-color: #8B0000;
-  --danger-hover: #A52A2A;
-  --danger-border: #8B0000;
-  --danger-text: #FFFFFF;
-
-  --link-color: #CD853F;
-  --link-hover: #DEB887;
-  --link-border: #CD853F;
-  --link-text: #FFFFFF;
-
-  --outline-color: var(--secondary-color);
-
-  --card-color: #2A2A2A;
-  --card-hover: #333333;
-  --card-border: #4A4A4A;
-  --card-text: #FFFFFF;
-
-  --discord-color: #7289DA;
-  --discord-text: #FFFFFF;
-
-  --online-color: #43B581;
-
-  --navbar-color: #1F1F1F;
-
-  --section-color: #2e2e2e;
-}
+/* Paleta de marca: ver src/brand.css — tokens canónicos teal+dorado (modo claro) */
 
 
 body {
@@ -181,7 +124,8 @@ a:focus,
 
 .btn:active,
 .btn:focus {
-  outline: none;
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
   box-shadow: none;
 }
 
@@ -422,8 +366,8 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid var(--outline-color);
-  box-shadow: 0 0 0 0.2rem rgba(141, 110, 99, 0.25);
+  outline: 2px solid var(--ring);
+  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
 }
 
 .global-session-title::placeholder {
@@ -624,13 +568,13 @@ select:focus {
 
 /* Botón de cerrar del modal */
 .btn-close {
-  filter: invert(1);
-  opacity: 0.8;
+  filter: none;
+  opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 
 .btn-close:hover {
-  filter: invert(0.8);
+  filter: none;
   opacity: 1;
 }
 
@@ -653,7 +597,7 @@ select:focus {
   background-color: var(--bg-color);
   color: var(--font-color);
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
 }
 
 /* Ajustes para texto en modales */
@@ -691,7 +635,7 @@ select:focus {
   grid-template-columns: minmax(280px, 1.5fr) auto auto;
   gap: 0.75rem;
   align-items: center;
-  background: rgba(31, 31, 31, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   z-index: 30;
 }
@@ -728,14 +672,14 @@ select:focus {
   gap: 0.5rem;
   min-width: 0;
   padding: 0.45rem 0.7rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(20, 32, 46, 0.05);
+  border: 1px solid var(--border);
   border-radius: 999px;
 }
 
 .top-stat-chip.accent {
-  background: rgba(205, 133, 63, 0.12);
-  border-color: rgba(205, 133, 63, 0.25);
+  background: rgba(181, 121, 26, 0.10);
+  border-color: rgba(181, 121, 26, 0.30);
 }
 
 .top-stat-button {
@@ -745,7 +689,7 @@ select:focus {
 }
 
 .top-stat-button:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 .gstat-icon {
@@ -767,7 +711,7 @@ select:focus {
 
 .top-stat-chip.accent .top-stat-value {
   font-size: 1.3rem;
-  color: var(--info-color);
+  color: var(--accent);
 }
 
 .top-navbar-actions {
@@ -823,16 +767,16 @@ select:focus {
 
 .top-navbar-actions .dropdown-item:hover,
 .top-navbar-actions .dropdown-item:focus {
-  background: rgba(255,255,255,0.08);
-  color: var(--white-color);
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--text);
 }
 
 .top-navbar-actions .dropdown-divider {
-  border-top-color: rgba(255,255,255,0.08);
+  border-top-color: var(--border);
 }
 
 .top-menu-danger {
-  color: #ffb4b4 !important;
+  color: var(--danger) !important;
 }
 
 /* ───────────────────────────────────────────
@@ -859,8 +803,8 @@ select:focus {
   gap: 0.55rem;
   padding: 0.42rem 0.75rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(20, 32, 46, 0.04);
+  border: 1px solid var(--border);
 }
 
 .control-summary-pill-wide {
@@ -1041,7 +985,7 @@ select:focus {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  background: #0f172a;
+  background: #14202E;
   margin-bottom: 1rem;
   line-height: 0;
 }
