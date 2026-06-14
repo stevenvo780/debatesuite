@@ -1,0 +1,748 @@
+.criteria-sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: var(--section-color);
+  border-left: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-title {
+  color: var(--font-color);
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 1rem;
+}
+
+/* Active target indicator */
+.active-target {
+  background: var(--success-color);
+  color: var(--success-text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.active-target small {
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+
+.active-target strong {
+  font-size: 1rem;
+}
+
+.target-score {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.no-target {
+  background: var(--secondary-color);
+  color: var(--secondary-text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Criteria groups */
+.criteria-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0;
+}
+
+.bonus-label {
+  color: var(--success-hover);
+}
+
+.penalty-label {
+  color: var(--danger-hover);
+}
+
+/* Criterion items */
+.criterion-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.criterion-apply {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  background: var(--card-color);
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.82rem;
+}
+
+.criterion-apply:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.criterion-apply.bonus:not(:disabled):hover {
+  background: var(--success-color);
+  border-color: var(--success-border);
+  color: var(--success-text);
+}
+
+.criterion-apply.penalty:not(:disabled):hover {
+  background: var(--danger-color);
+  border-color: var(--danger-border);
+  color: var(--danger-text);
+}
+
+.criterion-apply:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+.criterion-name {
+  min-width: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.criterion-points {
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+/* Actions */
+.criterion-actions {
+  display: flex;
+  gap: 0.15rem;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--font-color);
+  opacity: 0.4;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.15s;
+  font-size: 0.75rem;
+}
+
+.action-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.action-btn.danger:hover {
+  color: var(--danger-hover);
+}
+
+/* Edit mode */
+.criterion-edit {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  width: 100%;
+}
+
+.criterion-edit .form-control {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.edit-action {
+  padding: 0.15rem !important;
+  color: var(--font-color) !important;
+  opacity: 0.7;
+}
+
+.edit-action:hover {
+  opacity: 1;
+}
+
+/* Add form */
+.add-criterion-form {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.add-criterion-form .form-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--font-color);
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.penalty-switch .form-check-label {
+  font-size: 0.8rem;
+  color: var(--font-color);
+}
+
+.penalty-switch .form-check-input:checked {
+  background-color: var(--danger-color);
+  border-color: var(--danger-border);
+}
+
+.no-criteria {
+  color: var(--font-color);
+  opacity: 0.5;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Flash animation when applying */
+@keyframes criterionFlash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); background: var(--warning-color); }
+  100% { transform: scale(1); }
+}
+
+.criterion-apply.applied {
+  animation: criterionFlash 0.3s ease;
+}
+
+/* ─── TABS ─── */
+.sidebar-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stab {
+  flex: 1;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  background: var(--card-color);
+  color: var(--font-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  opacity: 0.6;
+}
+
+.stab.active {
+  background: var(--primary-color);
+  color: var(--primary-text);
+  opacity: 1;
+}
+
+.stab:not(.active):hover {
+  opacity: 0.9;
+  background: var(--card-hover);
+}
+
+.tab-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* ─── FALLACY SECTION ─── */
+.fallacy-search .input-group-text {
+  background: var(--card-color);
+  border-color: var(--card-border);
+  color: var(--font-color);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.fallacy-search .form-control {
+  background: var(--card-color);
+  border-color: var(--card-border);
+  color: var(--font-color);
+  font-size: 0.8rem;
+}
+
+/* ─── ACTION PANEL (select-then-act) ─── */
+.fallacy-action-panel {
+  background: var(--card-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: panelSlideIn 0.2s ease;
+}
+
+@keyframes panelSlideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.action-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.action-panel-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.action-panel-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--font-color);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.action-panel-context {
+  font-size: 0.72rem;
+  color: var(--font-color);
+  opacity: 0.7;
+}
+
+.action-panel-close {
+  background: none;
+  border: none;
+  color: var(--font-color);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.action-panel-close:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.1);
+}
+
+.action-panel-buttons {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.action-big-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.55rem 0.4rem;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.action-big-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.action-big-btn.landed {
+  background: rgba(218, 165, 32, 0.12);
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+}
+
+.action-big-btn.landed:not(:disabled):hover {
+  background: var(--warning-color);
+  color: #1a1a1a;
+  transform: scale(1.03);
+}
+
+.action-big-btn.detected {
+  background: rgba(220, 53, 69, 0.12);
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.action-big-btn.detected:not(:disabled):hover {
+  background: var(--danger-color);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.action-big-btn:not(:disabled):active {
+  transform: scale(0.96);
+}
+
+.action-panel-warn {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--danger-color);
+  opacity: 0.8;
+}
+
+.action-panel-hint {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--font-color);
+  opacity: 0.7;
+}
+
+.detector-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.detector-picker-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--font-color);
+  opacity: 0.8;
+}
+
+.detector-picker-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.detector-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--section-color);
+  color: var(--font-color);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.detector-chip:hover {
+  border-color: var(--warning-color);
+}
+
+.detector-chip.selected {
+  background: rgba(85, 107, 47, 0.2);
+  border-color: var(--success-color);
+  color: var(--success-text);
+}
+
+.fallacy-history-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.55rem;
+}
+
+.fallacy-history-header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--font-color);
+  opacity: 0.8;
+}
+
+.fallacy-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fallacy-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  background: var(--card-color);
+}
+
+.fallacy-history-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.fallacy-history-copy strong,
+.fallacy-history-copy span {
+  overflow-wrap: anywhere;
+}
+
+.fallacy-history-copy strong {
+  font-size: 0.75rem;
+  color: var(--font-color);
+}
+
+.fallacy-history-copy span {
+  font-size: 0.68rem;
+  color: var(--font-color);
+  opacity: 0.75;
+}
+
+.fallacy-history-undo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: none;
+  color: var(--font-color);
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.fallacy-history-undo:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Flash feedback */
+@keyframes flashLanded {
+  0% { border-color: var(--warning-color); }
+  50% { background: var(--warning-color); border-color: var(--warning-color); }
+  100% { border-color: var(--primary-color); }
+}
+
+@keyframes flashDetected {
+  0% { border-color: var(--danger-color); }
+  50% { background: var(--danger-color); border-color: var(--danger-color); }
+  100% { border-color: var(--primary-color); }
+}
+
+.fallacy-action-panel.flash-landed {
+  animation: flashLanded 0.5s ease;
+}
+
+.fallacy-action-panel.flash-detected {
+  animation: flashDetected 0.5s ease;
+}
+
+/* ─── FALLACY LIST (grid) ─── */
+.fallacy-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.fallacy-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 6px;
+  background: var(--card-color);
+  border: 1px solid transparent;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.fallacy-item:hover {
+  background: var(--card-hover);
+}
+
+.fallacy-item.selected {
+  border-color: var(--primary-color);
+  background: rgba(205, 133, 63, 0.1);
+}
+
+/* Info icon */
+.fallacy-info-btn {
+  background: none;
+  border: none;
+  color: var(--font-color);
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  border-radius: 3px;
+}
+
+.fallacy-info-btn:hover {
+  opacity: 1;
+  color: var(--primary-color);
+  background: rgba(205, 133, 63, 0.15);
+}
+
+.fallacy-select-btn {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  background: none;
+  border: none;
+  color: var(--font-color);
+  text-align: left;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.15rem;
+  min-width: 0;
+  min-height: 100%;
+  width: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.fallacy-select-btn:hover {
+  color: var(--primary-hover);
+}
+
+.fallacy-item.selected .fallacy-select-btn {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.fallacy-meta-actions {
+  display: flex;
+  gap: 0.1rem;
+  flex-shrink: 0;
+  align-self: flex-start;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.fallacy-item:hover .fallacy-meta-actions {
+  opacity: 1;
+}
+
+/* Definition popover */
+.fallacy-def-popover {
+  grid-column: 1 / -1;
+  background: var(--section-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  animation: defPopIn 0.15s ease;
+}
+
+@keyframes defPopIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.def-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.def-popover-header strong {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.def-popover-header button {
+  background: none;
+  border: none;
+  color: var(--font-color);
+  opacity: 0.4;
+  cursor: pointer;
+  padding: 0.15rem;
+  font-size: 0.65rem;
+  border-radius: 3px;
+}
+
+.def-popover-header button:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.1);
+}
+
+.fallacy-def-popover p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--font-color);
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.add-fallacy-form {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.add-fallacy-form .form-control {
+  background: var(--card-color);
+  border-color: var(--card-border);
+  color: var(--font-color);
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .criteria-sidebar {
+    height: auto;
+    position: relative;
+    border-left: none;
+    border-top: 1px solid var(--card-border);
+  }
+  .sidebar-content {
+    padding: 1rem;
+  }
+}
