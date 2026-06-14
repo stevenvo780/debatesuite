@@ -367,7 +367,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--ring);
-  box-shadow: 0 0 0 0.2rem rgba(47, 132, 120, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(42, 122, 111, 0.15);
 }
 
 .global-session-title::placeholder {
@@ -597,7 +597,7 @@ select:focus {
   background-color: var(--bg-color);
   color: var(--font-color);
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(47, 132, 120, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(42, 122, 111, 0.15);
 }
 
 /* Ajustes para texto en modales */
@@ -689,7 +689,7 @@ select:focus {
 }
 
 .top-stat-button:hover {
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
 }
 
 .gstat-icon {
@@ -767,7 +767,7 @@ select:focus {
 
 .top-navbar-actions .dropdown-item:hover,
 .top-navbar-actions .dropdown-item:focus {
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
   color: var(--text);
 }
 

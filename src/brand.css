@@ -11,15 +11,15 @@
   --border:         #E5DFD2;
   --text:           #14202E;
   --text-muted:     #51606F;
-  --primary:        #2f8478;
+  --primary:        #2a7a6f;
   --primary-strong: #1e5c52;
   --on-primary:     #FFFFFF;
   --accent:         #9A6712;
   --accent-strong:  #7a5210;
   --on-accent:      #FFFFFF;
-  --link:           #2f8478;
-  --ring:           #2f8478;
-  --success:        #2f8478;
+  --link:           #2a7a6f;
+  --ring:           #2a7a6f;
+  --success:        #2a7a6f;
   --warning:        #92610A;
   --danger:         #B42318;
 
@@ -39,14 +39,14 @@
   --secondary-border:#51606F;
   --secondary-text:  #FFFFFF;
 
-  --info-color:      #2f8478;
+  --info-color:      #2a7a6f;
   --info-hover:      #1e5c52;
-  --info-border:     #2f8478;
+  --info-border:     #2a7a6f;
   --info-text:       #FFFFFF;
 
-  --success-color:   #2f8478;
+  --success-color:   #2a7a6f;
   --success-hover:   #1e5c52;
-  --success-border:  #2f8478;
+  --success-border:  #2a7a6f;
   --success-text:    #FFFFFF;
 
   /* Amber-dark for warning (passes AA on white: ~4.6:1) */
@@ -80,12 +80,12 @@
   --accent-strong:   #7a5210;
   --on-accent:       #FFFFFF;
   --danger:          #B42318;
-  --ring:            #2f8478;
-  --success:         #2f8478;
+  --ring:            #2a7a6f;
+  --success:         #2a7a6f;
   --warning:         #92610A;
   --primary-strong:  #1e5c52;
   --on-primary:      #FFFFFF;
 
   /* Cloud Atlas gradient signature */
-  --gradient-firma:  linear-gradient(110deg, #e0a85e 0%, #cf6a3c 35%, #43b5a6 100%);
+  --gradient-firma:  linear-gradient(110deg, #e0a85e 0%, #cf6a3c 35%, #2a7a6f 100%);
 }

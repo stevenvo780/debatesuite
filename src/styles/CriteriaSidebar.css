@@ -167,7 +167,7 @@
 
 .action-btn:hover {
   opacity: 1;
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
 }
 
 .action-btn.danger:hover {
@@ -361,7 +361,7 @@
 
 .action-panel-close:hover {
   opacity: 1;
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
 }
 
 .action-panel-buttons {
@@ -473,7 +473,7 @@
 }
 
 .detector-chip.selected {
-  background: rgba(47, 132, 120, 0.12);
+  background: rgba(42, 122, 111, 0.12);
   border-color: var(--success-color);
   color: var(--success-color);
 }
@@ -549,7 +549,7 @@
 }
 
 .fallacy-history-undo:hover {
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
 }
 
 /* Flash feedback */
@@ -603,7 +603,7 @@
 
 .fallacy-item.selected {
   border-color: var(--primary-color);
-  background: rgba(47, 132, 120, 0.07);
+  background: rgba(42, 122, 111, 0.07);
 }
 
 /* Info icon */
@@ -623,7 +623,7 @@
 .fallacy-info-btn:hover {
   opacity: 1;
   color: var(--primary-color);
-  background: rgba(47, 132, 120, 0.10);
+  background: rgba(42, 122, 111, 0.10);
 }
 
 .fallacy-select-btn {
@@ -711,7 +711,7 @@
 
 .def-popover-header button:hover {
   opacity: 1;
-  background: rgba(47, 132, 120, 0.08);
+  background: rgba(42, 122, 111, 0.08);
 }
 
 .fallacy-def-popover p {
