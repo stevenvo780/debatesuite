@@ -59,12 +59,13 @@ export default function GlobalSessionCard({
       <a
         href="https://www.stevenvallejo.com"
         className="sv-wordmark"
-        aria-label="Steven Vallejo — portal"
+        aria-label="Agón — Mouseîon portal"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img src="/favicon.svg" alt="" aria-hidden="true" width="26" height="26" className="sv-wordmark-logo" />
-        <span className="sv-wordmark-text">Steven Vallejo</span>
+        <span className="sv-wordmark-text">Agón</span>
+        <span className="sv-wordmark-ecosystem">Mouseîon</span>
       </a>
       <div className="top-navbar-title-area">
         <Form.Control

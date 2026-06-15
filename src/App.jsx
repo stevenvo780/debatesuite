@@ -529,8 +529,8 @@ export default function App() {
       <footer className="sv-ecosystem-footer" role="contentinfo">
         <span className="sv-ecosystem-footer-label">
           {data.language === 'es'
-            ? 'Parte del ecosistema de Steven Vallejo'
-            : 'Part of the Steven Vallejo ecosystem'}
+            ? 'Parte de Mouseîon'
+            : 'Part of Mouseîon'}
         </span>
         <ul className="sv-ecosystem-footer-links">
           <li><a href="https://www.stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Filosofía' : 'Philosophy'}</a></li>
@@ -538,6 +538,11 @@ export default function App() {
           <li><a href="https://www.stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Informática' : 'Computing'}</a></li>
           <li><a href="https://www.stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a></li>
         </ul>
+        <p className="sv-ecosystem-footer-authorship">
+          {data.language === 'es'
+            ? 'por Steven Vallejo'
+            : 'by Steven Vallejo'}
+        </p>
       </footer>
     </>
   )
