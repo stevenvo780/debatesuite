@@ -524,6 +524,21 @@ export default function App() {
         onHide={() => setShowRulesModal(false)}
         language={data.language}
       />
+
+      {/* Footer ecosistema */}
+      <footer className="sv-ecosystem-footer" role="contentinfo">
+        <span className="sv-ecosystem-footer-label">
+          {data.language === 'es'
+            ? 'Parte del ecosistema de Steven Vallejo'
+            : 'Part of the Steven Vallejo ecosystem'}
+        </span>
+        <ul className="sv-ecosystem-footer-links">
+          <li><a href="https://www.stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Filosofía' : 'Philosophy'}</a></li>
+          <li><a href="https://www.stevenvallejo.com/es#ciencias" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Ciencias' : 'Sciences'}</a></li>
+          <li><a href="https://www.stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Informática' : 'Computing'}</a></li>
+          <li><a href="https://www.stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a></li>
+        </ul>
+      </footer>
     </>
   )
 }

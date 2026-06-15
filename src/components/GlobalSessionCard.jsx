@@ -56,6 +56,16 @@ export default function GlobalSessionCard({
 }) {
   return (
     <div className="section-box global-card top-navbar">
+      <a
+        href="https://www.stevenvallejo.com"
+        className="sv-wordmark"
+        aria-label="Steven Vallejo — portal"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/favicon.svg" alt="" aria-hidden="true" width="26" height="26" className="sv-wordmark-logo" />
+        <span className="sv-wordmark-text">Steven Vallejo</span>
+      </a>
       <div className="top-navbar-title-area">
         <Form.Control
           placeholder={t('chatTitle')}

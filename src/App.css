@@ -632,12 +632,41 @@ select:focus {
 
 .top-navbar {
   display: grid;
-  grid-template-columns: minmax(280px, 1.5fr) auto auto;
+  grid-template-columns: auto minmax(200px, 1.5fr) auto auto;
   gap: 0.75rem;
   align-items: center;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   z-index: 30;
+}
+
+/* Brand wordmark */
+.sv-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none !important;
+  color: var(--text) !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sv-wordmark:hover,
+.sv-wordmark:focus {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.sv-wordmark-logo {
+  display: block;
+  flex-shrink: 0;
+}
+
+.sv-wordmark-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
 }
 
 .top-navbar-title-area {
@@ -1082,4 +1111,49 @@ select:focus {
   overflow-y: auto;
   border-left: 1px solid var(--border-color);
   background: var(--section-color);
+}
+
+/* ── Footer ecosistema Steven Vallejo ─────────────────────────────────────── */
+.sv-ecosystem-footer {
+  background: var(--surface, #0b1417);
+  border-top: 1px solid var(--border, #2a3a3a);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted, #8a9ba8);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+}
+
+.sv-ecosystem-footer-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.sv-ecosystem-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sv-ecosystem-footer-links a {
+  color: var(--primary, #43b5a6) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: color 0.15s;
+}
+
+.sv-ecosystem-footer-links a:hover,
+.sv-ecosystem-footer-links a:focus {
+  color: var(--accent, #e0a85e) !important;
+  text-decoration: underline !important;
 }
