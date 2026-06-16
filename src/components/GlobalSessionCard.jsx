@@ -10,7 +10,9 @@ import {
   BsGear,
   BsGlobeCentralSouthAsia,
   BsHourglassSplit,
+  BsMoonStars,
   BsSkipForwardFill,
+  BsSun,
   BsThreeDots,
   BsTranslate,
 } from "react-icons/bs"
@@ -53,20 +55,22 @@ export default function GlobalSessionCard({
   onReset,
   isFullscreen,
   toggleFullscreen,
+  onGoHome,
+  theme,
+  toggleTheme,
 }) {
   return (
     <div className="section-box global-card top-navbar">
-      <a
-        href="https://www.stevenvallejo.com"
+      <button
+        type="button"
         className="sv-wordmark"
-        aria-label="Agón — Mouseîon portal"
-        target="_blank"
-        rel="noopener noreferrer"
+        aria-label={language === 'es' ? 'Volver al inicio de Agón' : 'Back to Agón home'}
+        onClick={onGoHome}
       >
         <img src="/favicon.svg" alt="" aria-hidden="true" width="26" height="26" className="sv-wordmark-logo" />
         <span className="sv-wordmark-text">Agón</span>
         <span className="sv-wordmark-ecosystem">Mouseîon</span>
-      </a>
+      </button>
       <div className="top-navbar-title-area">
         <Form.Control
           placeholder={t('chatTitle')}
@@ -115,6 +119,14 @@ export default function GlobalSessionCard({
             <Dropdown.Item onClick={toggleLanguage}>
               <BsTranslate />
               <span>{`${t('toggleLanguage')} · ${language === 'es' ? 'English' : 'Español'}`}</span>
+            </Dropdown.Item>
+            <Dropdown.Item onClick={toggleTheme}>
+              {theme === 'dark' ? <BsSun /> : <BsMoonStars />}
+              <span>
+                {theme === 'dark'
+                  ? (language === 'es' ? 'Modo claro' : 'Light mode')
+                  : (language === 'es' ? 'Modo oscuro' : 'Dark mode')}
+              </span>
             </Dropdown.Item>
             <Dropdown.Item onClick={onShowRules}>
               <BsBook />

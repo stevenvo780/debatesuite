@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'logo192.png', 'logo512.png'],
       manifest: {
-        name: 'Debate Suite',
-        short_name: 'DebateSuite',
-        description: 'Moderador profesional de debates con simulador de dinámicas',
+        name: 'Agón — moderador de debates',
+        short_name: 'Agón',
+        description: 'Moderador profesional de debates con timer, turnos, estadísticas y simulador de dinámicas. Parte del ecosistema Mouseîon.',
         theme_color: '#2a7a6f',
         background_color: '#FBFAF6',
         display: 'standalone',
@@ -38,9 +38,12 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       output: {
+        // react-bootstrap must stay with React (it imports it). Splitting it
+        // into its own chunk created a circular bootstrap<->vendor edge that
+        // could run before React initialized → __SECRET_INTERNALS crash in prod.
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-redux', '@reduxjs/toolkit', 'redux-persist'],
-          bootstrap: ['bootstrap', 'react-bootstrap'],
+          vendor: ['react', 'react-dom', 'react-redux', '@reduxjs/toolkit', 'redux-persist', 'react-bootstrap'],
+          bootstrap: ['bootstrap'],
           icons: ['react-icons'],
           dnd: ['@dnd-kit/core', '@dnd-kit/sortable', '@dnd-kit/utilities']
         }

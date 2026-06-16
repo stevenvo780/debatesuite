@@ -36,6 +36,7 @@ import { useTimerLogic } from './hooks/useTimerLogic'
 import ConfirmationModals from './components/ConfirmationModals'
 import { assignParticipantVisualSlots, getNextParticipantVisualSlot } from "./participantVisuals"
 import { BsCpuFill, BsPeopleFill } from "react-icons/bs"
+import Landing from "./components/Landing"
 
 // Lazy-load the simulator so it doesn't increase initial bundle for users who don't use it
 const SimuladorDinamicas = lazy(() => import('./simulator/SimuladorDinamicas'))
@@ -60,12 +61,26 @@ export default function App() {
   const [recentFallacyActions, setRecentFallacyActions] = useState([])
   // Tab navigation: 'moderador' | 'simulador'
   const [activeTab, setActiveTab] = useState('moderador')
+  // View gate: 'landing' (brand hero) | 'app' (the moderator tool)
+  const [view, setView] = useState('landing')
+  // Theme for the tool view: 'light' (default, long-session legible) | 'dark'
+  const [theme, setTheme] = useState('light')
 
   const t = (key) => translations[data.language][key]
 
   const toggleLanguage = () => {
     dispatch(setLanguage(data.language === 'es' ? 'en' : 'es'))
   }
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+  }
+
+  // Tool view follows the chosen theme; the landing is always cosmos-dark.
+  useEffect(() => {
+    const next = view === 'app' ? theme : 'dark'
+    document.documentElement.setAttribute('data-theme', next)
+  }, [view, theme])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -377,6 +392,16 @@ export default function App() {
     simulador: data.language === 'es' ? 'Simulador de Dinamicas' : 'Dynamics Simulator',
   }
 
+  if (view === 'landing') {
+    return (
+      <Landing
+        language={data.language}
+        onEnter={() => setView('app')}
+        onToggleLanguage={toggleLanguage}
+      />
+    )
+  }
+
   return (
     <>
       {/* Top navbar — always visible */}
@@ -397,6 +422,9 @@ export default function App() {
         onReset={handleResetConfirmation}
         isFullscreen={isFullscreen}
         toggleFullscreen={handleToggleFullscreen}
+        onGoHome={() => setView('landing')}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       {/* Tab switcher */}
@@ -533,10 +561,10 @@ export default function App() {
             : 'Part of Mouseîon'}
         </span>
         <ul className="sv-ecosystem-footer-links">
-          <li><a href="https://www.stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Filosofía' : 'Philosophy'}</a></li>
-          <li><a href="https://www.stevenvallejo.com/es#ciencias" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Ciencias' : 'Sciences'}</a></li>
-          <li><a href="https://www.stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Informática' : 'Computing'}</a></li>
-          <li><a href="https://www.stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a></li>
+          <li><a href="https://stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Filosofía' : 'Philosophy'}</a></li>
+          <li><a href="https://stevenvallejo.com/es#ciencias" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Ciencias' : 'Sciences'}</a></li>
+          <li><a href="https://stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Informática' : 'Computing'}</a></li>
+          <li><a href="https://stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a></li>
         </ul>
         <p className="sv-ecosystem-footer-authorship">
           {data.language === 'es'

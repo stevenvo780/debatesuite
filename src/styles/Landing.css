@@ -1,0 +1,401 @@
+/* ════════════════════════════════════════════════════════════
+   AGÓN — Landing / hero (Cloud Atlas cosmos)
+   Dark by design: the contest happens in the room's hush.
+   Signature: lemniscate-orbit clock that ticks at its crossing.
+   ════════════════════════════════════════════════════════════ */
+
+.landing {
+  --night: #0b1417;
+  --night-2: #0f1c20;
+  --teal: #43b5a6;
+  --teal-bright: #5bc7b8;
+  --gold: #e0a85e;
+  --rust: #cf6a3c;
+  --ink: #eef4f2;
+  --ink-muted: #9fb3af;
+  --hairline: #213539;
+
+  min-height: 100vh;
+  background:
+    radial-gradient(120% 90% at 78% -10%, rgba(67, 181, 166, 0.14) 0%, transparent 55%),
+    radial-gradient(90% 70% at 8% 8%, rgba(224, 168, 94, 0.10) 0%, transparent 50%),
+    var(--night);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ── Top bar ─────────────────────────────────────────────── */
+.landing-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem clamp(1rem, 4vw, 3rem);
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.landing-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.landing-wordmark-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.landing-wordmark-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  padding: 0.18em 0.5em;
+  border: 1px solid rgba(91, 199, 184, 0.5);
+  border-radius: 4px;
+}
+
+.landing-lang {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s;
+}
+
+.landing-lang:hover {
+  color: var(--ink);
+  border-color: var(--teal);
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.landing-hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vh, 4.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
+}
+
+.landing-eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  margin: 0 0 1.15rem;
+}
+
+.landing-title {
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.3rem;
+  color: var(--ink);
+}
+
+.landing-title-mark {
+  background: linear-gradient(100deg, var(--gold) 0%, var(--rust) 55%, var(--teal) 110%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.landing-lede {
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 34ch;
+  margin: 0 0 2.1rem;
+}
+
+.landing-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.25rem;
+}
+
+.landing-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #07110f;
+  background: linear-gradient(100deg, var(--gold), var(--rust));
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 12px 28px -10px rgba(224, 168, 94, 0.55);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.landing-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -10px rgba(224, 168, 94, 0.65);
+}
+
+.landing-cta-primary:active {
+  transform: translateY(0);
+}
+
+.landing-cta-arrow {
+  transition: transform 0.18s ease;
+}
+
+.landing-cta-primary:hover .landing-cta-arrow {
+  transform: translateX(3px);
+}
+
+.landing-cta-note {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  max-width: 22ch;
+  line-height: 1.4;
+}
+
+/* ── Signature: lemniscate-orbit clock ───────────────────── */
+.hero-clock {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.hero-clock-orbit {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 0 22px rgba(67, 181, 166, 0.22));
+}
+
+.hero-orbit-path {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 760;
+  animation: agon-trace 2.4s ease-out 0.2s forwards;
+}
+
+.hero-node {
+  opacity: 0;
+  animation: agon-node-in 0.5s ease-out 2.2s forwards;
+}
+
+.hero-node-teal { fill: var(--teal-bright); }
+.hero-node-rust { fill: var(--rust); }
+
+.hero-clock-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.hero-clock-time {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: rgba(11, 20, 23, 0.55);
+  padding: 0.15em 0.55em;
+  border-radius: 10px;
+  border: 1px solid rgba(91, 199, 184, 0.35);
+  font-variant-numeric: tabular-nums;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes agon-trace {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes agon-node-in {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ── Fallacy marquee (the actual catalog as structure) ───── */
+.landing-marquee {
+  border-block: 1px solid var(--hairline);
+  padding-block: 0.95rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.landing-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: agon-marquee 44s linear infinite;
+}
+
+.landing-marquee-list {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin: 0;
+  padding: 0 1.2rem;
+  list-style: none;
+}
+
+.landing-marquee-item {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  position: relative;
+}
+
+.landing-marquee-item::before {
+  content: "·";
+  color: var(--rust);
+  margin-right: 2.4rem;
+}
+
+@keyframes agon-marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ── Features ────────────────────────────────────────────── */
+.landing-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--hairline);
+  border-block-end: 1px solid var(--hairline);
+}
+
+.landing-feature {
+  background: var(--night);
+  padding: clamp(1.5rem, 3vw, 2.2rem) clamp(1.25rem, 3vw, 2rem);
+}
+
+.landing-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background: rgba(67, 181, 166, 0.12);
+  color: var(--teal-bright);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.landing-feature-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.55rem;
+  color: var(--ink);
+}
+
+.landing-feature-body {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.landing-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  padding: 1.6rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.landing-footer-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  opacity: 0.85;
+}
+
+.landing-footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+}
+
+.landing-footer-links a {
+  color: var(--teal-bright);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.landing-footer-links a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.landing-footer-by {
+  opacity: 0.75;
+}
+
+/* ── Focus + responsive + motion ─────────────────────────── */
+.landing-cta-primary:focus-visible,
+.landing-lang:focus-visible,
+.landing-wordmark:focus-visible,
+.landing-footer-links a:focus-visible {
+  outline: 2px solid var(--teal-bright);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+@media (max-width: 860px) {
+  .landing-hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding-top: 1.5rem;
+  }
+  .hero-clock {
+    order: -1;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit-path { animation: none; stroke-dashoffset: 0; }
+  .hero-node { animation: none; opacity: 1; }
+  .landing-marquee-track { animation: none; }
+  .landing-cta-primary,
+  .landing-cta-arrow { transition: none; }
+}

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://agon.stevenvallejo.com/sitemap.xml
+Host: agon.stevenvallejo.com

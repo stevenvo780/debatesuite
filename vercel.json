@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.agon.stevenvallejo.com" }],
+      "destination": "https://agon.stevenvallejo.com/$1",
+      "permanent": true,
+      "statusCode": 308
+    }
+  ],
+  "rewrites": [
+    { "source": "/((?!sitemap\\.xml|robots\\.txt|favicon|icon|apple-touch-icon|og-image|logo|manifest).*)", "destination": "/index.html" }
+  ]
+}
