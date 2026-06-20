@@ -38,8 +38,8 @@ function HeroClock() {
         <defs>
           <linearGradient id="agon-orbit" x1="20" y1="40" x2="220" y2="120" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#e0a85e" />
-            <stop offset="0.4" stopColor="#cf6a3c" />
-            <stop offset="1" stopColor="#43b5a6" />
+            <stop offset="0.5" stopColor="#c0522a" />
+            <stop offset="1" stopColor="#8b3a1a" />
           </linearGradient>
         </defs>
         {/* Figure-eight phase orbit (the lemniscate at scale) */}
