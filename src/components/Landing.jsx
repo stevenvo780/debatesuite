@@ -38,8 +38,8 @@ function HeroClock() {
         <defs>
           <linearGradient id="agon-orbit" x1="20" y1="40" x2="220" y2="120" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#e0a85e" />
-            <stop offset="0.5" stopColor="#c0522a" />
-            <stop offset="1" stopColor="#8b3a1a" />
+            <stop offset="0.5" stopColor="#5bc7b8" />
+            <stop offset="1" stopColor="#43b5a6" />
           </linearGradient>
         </defs>
         {/* Figure-eight phase orbit (the lemniscate at scale) */}
@@ -148,10 +148,10 @@ export default function Landing({ language, onEnter, onToggleLanguage }) {
       <footer className="landing-footer">
         <span className="landing-footer-label">{c.footerLabel}</span>
         <nav className="landing-footer-links" aria-label="Mouseîon">
-          <a href="https://stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{c.frentes.filosofia}</a>
-          <a href="https://stevenvallejo.com/es#ciencias" target="_blank" rel="noopener noreferrer">{c.frentes.ciencias}</a>
-          <a href="https://stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{c.frentes.informatica}</a>
-          <a href="https://stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a>
+          <a href="https://stevenvallejo.com/es#gallery-filosofia" target="_blank" rel="noopener noreferrer">{c.frentes.filosofia}</a>
+          <a href="https://stevenvallejo.com/es#gallery-ciencias" target="_blank" rel="noopener noreferrer">{c.frentes.ciencias}</a>
+          <a href="https://stevenvallejo.com/es#gallery-informatica" target="_blank" rel="noopener noreferrer">{c.frentes.informatica}</a>
+          <a href="https://stevenvallejo.com/es#gallery-ingenieria" target="_blank" rel="noopener noreferrer">{c.frentes.ingenieria}</a>
         </nav>
         <span className="landing-footer-by">{c.footerBy}</span>
       </footer>

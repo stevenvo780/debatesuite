@@ -117,7 +117,7 @@
 }
 
 .landing-title-mark {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--rust) 50%, #8b3a1a 100%);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--teal-bright) 50%, var(--teal) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

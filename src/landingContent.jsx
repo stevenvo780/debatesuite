@@ -51,7 +51,7 @@ export const landing = {
     ],
     footerLabel: "Parte de Mouseîon",
     footerBy: "por Steven Vallejo",
-    frentes: { filosofia: "Filosofía", ciencias: "Ciencias", informatica: "Informática" },
+    frentes: { filosofia: "Filosofía", ciencias: "Ciencias", informatica: "Informática", ingenieria: "Ingeniería" },
     fallacies: FALLACIES,
   },
   en: {
@@ -89,7 +89,7 @@ export const landing = {
     ],
     footerLabel: "Part of Mouseîon",
     footerBy: "by Steven Vallejo",
-    frentes: { filosofia: "Philosophy", ciencias: "Sciences", informatica: "Computing" },
+    frentes: { filosofia: "Philosophy", ciencias: "Sciences", informatica: "Computing", ingenieria: "Engineering" },
     fallacies: FALLACIES_EN,
   },
 }
