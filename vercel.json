@@ -8,6 +8,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/((?!sitemap\\.xml|robots\\.txt|favicon|icon|apple-touch-icon|og-image|logo|manifest).*)", "destination": "/index.html" }
+    { "source": "/((?!sitemap\\.xml|robots\\.txt|favicon|icon|apple-touch-icon|og-image|manifest).*)", "destination": "/index.html" }
   ]
 }

@@ -564,7 +564,7 @@ export default function App() {
           <li><a href="https://stevenvallejo.com/es#filosofia" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Filosofía' : 'Philosophy'}</a></li>
           <li><a href="https://stevenvallejo.com/es#ciencias" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Ciencias' : 'Sciences'}</a></li>
           <li><a href="https://stevenvallejo.com/es#informatica" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Informática' : 'Computing'}</a></li>
-          <li><a href="https://stevenvallejo.com/es#enterprise" target="_blank" rel="noopener noreferrer">Enterprise</a></li>
+          <li><a href="https://stevenvallejo.com/es#ingenieria" target="_blank" rel="noopener noreferrer">{data.language === 'es' ? 'Ingeniería' : 'Engineering'}</a></li>
         </ul>
         <p className="sv-ecosystem-footer-authorship">
           {data.language === 'es'

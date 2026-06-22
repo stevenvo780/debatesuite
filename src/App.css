@@ -172,7 +172,7 @@ a:focus,
 }
 
 .btn-outline-secondary {
-  color: var (--secondary-color);
+  color: var(--secondary-color);
   border-color: var(--secondary-border);
   background-color: transparent;
 }
@@ -433,7 +433,7 @@ select:focus {
 
 .alert-success {
   background-color: var(--success-color);
-  border-color: var (--success-border);
+  border-color: var(--success-border);
   color: var(--success-text);
 }
 
