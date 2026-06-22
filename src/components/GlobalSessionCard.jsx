@@ -67,7 +67,7 @@ export default function GlobalSessionCard({
         aria-label={language === 'es' ? 'Volver al inicio de Agón' : 'Back to Agón home'}
         onClick={onGoHome}
       >
-        <img src="/favicon.svg" alt="" aria-hidden="true" width="26" height="26" className="sv-wordmark-logo" />
+        <img src="/icon.svg" alt="" aria-hidden="true" width="26" height="26" className="sv-wordmark-logo" />
         <span className="sv-wordmark-text">Agón</span>
         <span className="sv-wordmark-ecosystem">Mouseîon</span>
       </button>
