@@ -95,6 +95,9 @@
   --atlas-teal:     #43b5a6;
   --atlas-gold:     #e0a85e;
   --atlas-rust:     #cf6a3c;
+
+  /* Accent 2 — frente de Filosofía (dorado Cloud Atlas) */
+  --accent-2:       #e0a85e;
 }
 
 /* ═══════════════════════════════════════════
@@ -104,6 +107,14 @@
   --font-titles: 'Cormorant Garamond', serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Aplicar tipografía de título a todos los headings y clases display */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.heading, .title, .subtitle {
+  font-family: var(--font-titles);
 }
 
 /* ═══════════════════════════════════════════
@@ -179,4 +190,7 @@
 
   --navbar-color:    #0c181b;
   --section-color:   #0d1a1e;
+
+  /* Accent 2 — frente de Filosofía (dorado Cloud Atlas) */
+  --accent-2:       #e0a85e;
 }
