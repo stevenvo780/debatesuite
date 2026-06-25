@@ -98,75 +98,84 @@
 }
 
 /* ═══════════════════════════════════════════
+   TIPOGRAFÍA CANÓNICA
+   ═══════════════════════════════════════════ */
+:root {
+  --font-titles: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ═══════════════════════════════════════════
    DARK MODE — Cloud Atlas cosmos
    Applied via [data-theme="dark"] (manual toggle).
    Tool stays usable; hero/landing always cosmos.
    ═══════════════════════════════════════════ */
 [data-theme="dark"] {
   --bg:             #0b1417;
-  --surface:        #11202326;
+  --surface:        #131e22;
   --surface-2:      #0f1c20;
   --border:         #25383b;
-  --text:           #eef4f2;
-  --text-muted:     #93a8a4;
+  --text:           #e8e0d4;
+  --text-muted:     #8fa3a8;
   --primary:        #e0a85e;
-  --primary-strong: #c0522a;
-  --on-primary:     #07110f;
+  --primary-strong: #b8873a;
+  --on-primary:     #0b1417;
   --accent:         #e0a85e;
-  --accent-strong:  #cf8e44;
-  --on-accent:      #1a1206;
-  --link:           #5bc7b8;
-  --ring:           #5bc7b8;
-  --success:        #5bc7b8;
+  --accent-strong:  #b8873a;
+  --on-accent:      #0b1417;
+  --link:           #43b5a6;
+  --ring:           #43b5a6;
+  --success:        #43b5a6;
   --warning:        #e0a85e;
   --danger:         #e57464;
 
   --bg-color:        #0b1417;
-  --font-color:      #eef4f2;
-  --white-color:     #eef4f2;
+  --font-color:      #e8e0d4;
+  --white-color:     #e8e0d4;
   --border-color:    #25383b;
 
   --primary-color:   #e0a85e;
-  --primary-hover:   #c0522a;
+  --primary-hover:   #b8873a;
   --primary-border:  #e0a85e;
-  --primary-text:    #07110f;
+  --primary-text:    #0b1417;
 
   --secondary-color: #2b4044;
   --secondary-hover: #36504f;
   --secondary-border:#2b4044;
-  --secondary-text:  #eef4f2;
+  --secondary-text:  #e8e0d4;
 
   --info-color:      #43b5a6;
-  --info-hover:      #5bc7b8;
+  --info-hover:      #2a7a70;
   --info-border:     #43b5a6;
-  --info-text:       #07110f;
+  --info-text:       #0b1417;
 
   --success-color:   #43b5a6;
-  --success-hover:   #5bc7b8;
+  --success-hover:   #2a7a70;
   --success-border:  #43b5a6;
-  --success-text:    #07110f;
+  --success-text:    #0b1417;
 
   --warning-color:   #e0a85e;
-  --warning-hover:   #cf8e44;
+  --warning-hover:   #b8873a;
   --warning-border:  #e0a85e;
-  --warning-text:    #1a1206;
+  --warning-text:    #0b1417;
 
   --danger-color:    #e57464;
   --danger-hover:    #d4604f;
   --danger-border:   #e57464;
-  --danger-text:     #1a0a08;
+  --danger-text:     #0b1417;
 
-  --link-color:      #5bc7b8;
+  --link-color:      #43b5a6;
   --link-hover:      #e0a85e;
-  --link-border:     #5bc7b8;
-  --link-text:       #07110f;
+  --link-border:     #43b5a6;
+  --link-text:       #0b1417;
 
   --outline-color:   #43b5a6;
 
   --card-color:      #0f1c20;
   --card-hover:      #14262a;
   --card-border:     #25383b;
-  --card-text:       #eef4f2;
+  --card-text:       #e8e0d4;
 
   --navbar-color:    #0c181b;
   --section-color:   #0d1a1e;

@@ -38,7 +38,7 @@ function HeroClock() {
         <defs>
           <linearGradient id="agon-orbit" x1="20" y1="40" x2="220" y2="120" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#e0a85e" />
-            <stop offset="0.5" stopColor="#5bc7b8" />
+            <stop offset="0.5" stopColor="#b8873a" />
             <stop offset="1" stopColor="#43b5a6" />
           </linearGradient>
         </defs>
